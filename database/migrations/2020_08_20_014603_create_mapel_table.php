@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMateriKelasTable extends Migration
+class CreateMapelTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateMateriKelasTable extends Migration
      */
     public function up()
     {
-        Schema::create('kelas_materi', function (Blueprint $table) {
+        Schema::create('mapel', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('materi_id');
-            $table->integer('kelas_id');
+            $table->string('nama');
+            $table->string('slug');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreateMateriKelasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('materi_kelas');
+        Schema::dropIfExists('mapel');
     }
 }

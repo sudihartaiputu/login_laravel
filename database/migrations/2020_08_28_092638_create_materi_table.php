@@ -16,7 +16,7 @@ class CreateMateriTable extends Migration
         Schema::create('materi', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('guru_id');
-            $table->integer('kelas_id');
+            $table->integer('mapel_id');
             $table->string('judul');
             $table->longText('konten');
             $table->string('gambar');

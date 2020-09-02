@@ -16,6 +16,7 @@ class CreateGurukelasTable extends Migration
         Schema::create('gurukelas', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('guru_id');
+	    $table->integer('mapel_id');            
             $table->integer('kelas_id');
             $table->timestamps();
         });
