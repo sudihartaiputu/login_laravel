@@ -32,6 +32,13 @@ Route::group(['middleware' => ['auth:user']], function () {
     Route::resource('/user', 'UserController');
     // GURU
     Route::resource('/guru', 'GuruController');
+    // TAHUN AKADEMIK
+    Route::get('/tahun', 'TAController@index')->name('akademik.ta');
+    Route::get('/tahun/create', 'TAController@create')->name('akademik.ta.create');
+    Route::patch('/tahun/update', 'TAController@update')->name('akademik.ta.update');
+    Route::post('/tahun/store', 'TAController@store')->name('akademik.ta.store');
+    Route::get('/tahun/apply/{id}', 'TAController@apply')->name('akademik.ta.apply');
+    Route::get('/tahun/delete/{id}', 'TAController@destroy')->name('akademik.ta.delete');
     // SISWA
     Route::resource('/siswa', 'SiswaController');
     // KELAS
@@ -40,7 +47,7 @@ Route::group(['middleware' => ['auth:user']], function () {
     Route::resource('/mapel', 'MapelController');
     // SISWASKL
     Route::resource('/siswaskl', 'SiswasklController');
-    // KATGORI
+    // KATEGORI
     Route::resource('/kategori', 'KategoriController');
     // TAG
     Route::resource('/tag', 'TagController');
