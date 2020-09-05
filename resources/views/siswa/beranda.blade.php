@@ -118,7 +118,7 @@
                 <div class="active-popular-carusel">
                     @foreach ($materi as $materibaru)
                     <div class="single-popular-carusel">
-                        <a href="{{ route ('materi.isi', $materibaru->slug) }}">
+                        <a href="{{ route ('materi.isi', $materibaru->slug) }}" id="postVisitCount">
                             <div class="thumb-wrap relative">
                                 <div class="thumb relative">
                                     <div class="overlay overlay-bg"></div>
@@ -374,6 +374,8 @@
 
     </footer>
     <!-- End footer Area -->
+
+
 
     <script src="{{asset('public/assets/siswa/js/vendor/jquery-2.2.4.min.js')}}"></script>
     <script src="{{asset('public/assets/siswa/js/popper.min.js')}}" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

@@ -172,8 +172,10 @@ class MateriController extends Controller
     }
     public function isi($slug)
     {
+        $materisemua = Materi::orderBy('created_at', 'desc')->paginate(4);
+        $mapel = Mapel::all();
         $data = Materi::where('slug', $slug)->get();
         // dd($materi);
-        return view('siswa.materi.isi', compact('data'));
+        return view('siswa.materi.isi', compact('data', 'materisemua', 'mapel'));
     }
 }

@@ -5,7 +5,7 @@
                 <div class="row">
                     <div class="col-lg-6 col-sm-6 col-8 header-top-left no-padding">
                         <ul>
-                            <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href=""><i class="fab fa-facebook-f"></i></i></a></li>
                             <li><a href=""><i class="fab fa-youtube"></i></a></li>
                         </ul>
                     </div>
