@@ -16,7 +16,8 @@ class Materi extends Model
         'judul',
         'konten',
         'gambar',
-        'slug'
+        'slug',
+        'view'
     ];
     public function mapel()
     {

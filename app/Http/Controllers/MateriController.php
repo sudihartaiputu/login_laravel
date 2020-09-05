@@ -58,7 +58,8 @@ class MateriController extends Controller
             'konten' => $request->konten,
             'gambar' => 'public/upload/materi/' . $new_gambar,
             'slug' => Str::slug($request->judul),
-            'guru_id' => Auth::id()
+            'guru_id' => Auth::id(),
+            'view' => '0'
         ]);
 
         $materi->kelas()->attach($request->kelas_id);
@@ -168,5 +169,11 @@ class MateriController extends Controller
         $materi->kelas()->detach();
         $materi->forceDelete();
         return redirect()->back()->with('sukses', 'Postingan berhasil di Hapus Permanen');
+    }
+    public function isi($slug)
+    {
+        $data = Materi::where('slug', $slug)->get();
+        // dd($materi);
+        return view('siswa.materi.isi', compact('data'));
     }
 }

@@ -5,7 +5,7 @@
     <!-- Mobile Specific Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon-->
-    <link rel="shortcut icon" href="img/fav.png">
+    <link rel="shortcut icon" href="{{asset('public/assets/siswa/img/favicon.png')}}">
     <!-- Author Meta -->
     <meta name="author" content="colorlib">
     <!-- Meta Description -->
@@ -43,9 +43,9 @@
         <div class="row d-flex align-items-center justify-content-center">
             <div class="about-content col-lg-12">
                 <h1 class="text-white">
-                    @yield('judul')
+                    {{$materi->judul}}
                 </h1>
-                <p class="text-white link-nav"><a href="/berandasiswa/">Home </a> <span><i class="fas fa-arrow-right"></span></i><a href="courses.html"> @yield('judul')</a></p>
+                <p class="text-white link-nav"><a href="{{route ('beranda.siswa') }}">Home </a> <span><i class="fas fa-arrow-right"></span></i><a href="courses.html"> {{$materi->judul}}</a></p>
             </div>
         </div>
     </div>

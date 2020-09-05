@@ -19,11 +19,11 @@
         <div class="container main-menu">
             <div class="row align-items-center justify-content-between d-flex">
                 <div id="logo">
-                    <a href="index.html"><img src="img/logo.png" alt="" title="" /></a>
+                    <a href="index.html"><img src="{{asset('public/assets/siswa/img/Logosekolah.png')}}" alt="" title="SMANEV" /></a>
                 </div>
                 <nav id="nav-menu-container">
                     <ul class="nav-menu">
-                        <li><a href="/berandasiswa">Home</a></li>
+                        <li><a href="{{route('beranda.siswa')}}">Home</a></li>
                         <li><a href="/siswa/materi">Materi</a></li>
                         <li><a href="/siswa/tugas">Tugas</a></li>
                         <li><a href="/siswa/ujian">Ujian</a></li>

@@ -76,6 +76,7 @@ Route::group(['middleware' => ['auth:guru']], function () {
 // SISWA
 Route::group(['middleware' => ['auth:user,guru,siswa']], function () {
     Route::get('/berandasiswa', 'BerandaController@berandasiswa')->name('beranda.siswa');
+    Route::get('/siswa/materi/{slug}', 'MateriController@isi')->name('materi.isi');
     Route::post('/siswa/biodata/{id}/add', 'SiswaController@addbiodata')->name('siswa.addbiodata');
 });
 

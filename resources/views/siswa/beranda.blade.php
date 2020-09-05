@@ -5,7 +5,7 @@
     <!-- Mobile Specific Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon-->
-    <link rel="shortcut icon" href="img/fav.png">
+    <link rel="shortcut icon" href="{{asset('public/assets/siswa/img/favicon.png')}}">
     <!-- Author Meta -->
     <meta name="author" content="colorlib">
     <!-- Meta Description -->
@@ -34,37 +34,7 @@
 </head>
 
 <body>
-    <header id="header" id="home">
-        <div class="header-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-sm-6 col-8 header-top-left no-padding">
-                        <ul>
-                            <li><a href="https://www.facebook.com/groups/285398351816578"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="https://www.youtube.com/channel/UCm4V-N2KoVg9MOtTG3oLnsw?view_as=subscriber"><i class="fab fa-youtube"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-6 col-sm-6 col-4 header-top-right no-padding">
-                        <a href=""><span class="fas fa-user"></span> <span class="text">{{ Auth::user()->name }}</span></a>
-                        <a href=""><span class="fas fa-envelope"></span> <span class="text">{{ Auth::user()->email }}</span></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container main-menu">
-            <div class="row align-items-center justify-content-between d-flex">
-                <div id="logo">
-                    <a href="index.html"><img src="img/logo.png" alt="" title="" /></a>
-                </div>
-                <nav id="nav-menu-container">
-                    <ul class="nav-menu">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="{{route('logout')}}"> <i class="fas fa-sign-out-alt"> Keluar</i></a></li>
-                    </ul>
-                </nav><!-- #nav-menu-container -->
-            </div>
-        </div>
-    </header><!-- #header -->
+    @include('layouts.siswa.navbar')
 
     <!-- start banner Area -->
     <section class="banner-area relative" id="home">
@@ -139,20 +109,20 @@
             <div class="row d-flex justify-content-center">
                 <div class="menu-content pb-70 col-lg-8">
                     <div class="title text-center">
-                        <h1 class="mb-10">Kumpulan materi</h1>
+                        <h1 class="mb-10">Materi Terbaru</h1>
                         <p>Semangat belajar demi Malangke Gemilang</p>
                     </div>
                 </div>
             </div>
             <div class="row">
-                @foreach ($materi as $materibaru)
                 <div class="active-popular-carusel">
+                    @foreach ($materi as $materibaru)
                     <div class="single-popular-carusel">
-                        <a href="#">
+                        <a href="{{ route ('materi.isi', $materibaru->slug) }}">
                             <div class="thumb-wrap relative">
                                 <div class="thumb relative">
                                     <div class="overlay overlay-bg"></div>
-                                    <img class="img-fluid" src="{{$materibaru->gambar}}" alt="">
+                                    <img class="img-fluid" src="{{$materibaru->gambar}}" style="width:270px;height:200px;" alt="">
                                 </div>
                                 <div class="meta d-flex justify-content-between">
                                     <p><span class="lnr lnr-users"></span> {{$materibaru->guru->name}}
@@ -168,8 +138,8 @@
                         </a>
                     </div>
                 </div>
+                @endforeach
             </div>
-            @endforeach
         </div>
     </section>
     <!-- End popular-course Area -->

@@ -45,7 +45,7 @@
                                         <a href="{{route('akademik.ta.apply', $temp->id)}}" class="btn-sm btn-success mr-2">Aktifkan</a>
                                         @endif
                                         <a href="" data-value="{{$temp->nama}}" data-id="{{$temp->id}}" class="btn-sm btn-warning mr-2" data-toggle="modal" data-target=".edit-ta"><i class="fa fa-edit"></i></a>
-                                        <a href="" data-messages="{{$temp->nama}}" class="btn-sm btn-danger" data-toggle="modal" data-target=".confirm-delete"><i class="fa fa-trash"></i></a>
+                                        <a href="" data-messages="{{route('akademik.ta.delete',$temp->id)}}" class="btn-sm btn-danger" data-toggle="modal" data-target=".confirm-delete"><i class="fa fa-trash"></i></a>
                                     </div>
                                 </td>
                             </tr>
@@ -112,7 +112,7 @@
                 </div>
                 <div class="modal-footer">
                     <input type="hidden" name="_token" value="{{csrf_token()}}" />
-                    <input type="hidden" name="id" class="value-id" />
+                    <input type="hidden" name="id" class="data-id" />
                     <input type="hidden" name="_method" value="patch" />
                     <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
                     <button type="submit" class="btn btn-success">Perbaharui</button>
