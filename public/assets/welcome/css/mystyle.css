@@ -8700,7 +8700,7 @@ h1, h2, h3, h4, h5,
       .ftco-team .owl-dots .owl-dot.active {
         background: #ffb400; }
 
-.team-wrap .img {
+.guru-wrap .img {
   width: 120px;
   height: 120px;
   margin: 0 auto;
@@ -8710,13 +8710,13 @@ h1, h2, h3, h4, h5,
   -ms-border-radius: 50%;
   border-radius: 50%; }
 
-.team-wrap .text h6 {
+.guru-wrap .text h6 {
   color: #fff;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 800; }
 
-.team-wrap .text .position {
-  color: rgba(255, 255, 255, 0.8); }
+.guru-wrap .text .position {
+  color: rgba(255, 255, 255, 0.959); }
 
 .top-score .img {
   width: 120px;

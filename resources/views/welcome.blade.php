@@ -19,7 +19,7 @@
                 <div class="media block-6 services d-flex">
                     <div class="icon"><span class="flaticon-american-football"></span></div>
                     <div class="media-body">
-                        <h3 class="heading mb-3">Senior Team</h3>
+                        <h3 class="heading mb-3">Pramuka</h3>
                         <p>A small river named Duden flows by their place and supplies.</p>
                     </div>
                 </div>
@@ -28,7 +28,7 @@
                 <div class="media block-6 services d-flex">
                     <div class="icon"><span class="flaticon-american-football-1"></span></div>
                     <div class="media-body">
-                        <h3 class="heading mb-3">For Kids</h3>
+                        <h3 class="heading mb-3">Paskibraka</h3>
                         <p>A small river named Duden flows by their place and supplies.</p>
                     </div>
                 </div>
@@ -37,7 +37,7 @@
                 <div class="media block-6 services d-flex">
                     <div class="icon"><span class="flaticon-lockers"></span></div>
                     <div class="media-body">
-                        <h3 class="heading mb-3">Football Schools</h3>
+                        <h3 class="heading mb-3">PMR & PMI</h3>
                         <p>A small river named Duden flows by their place and supplies.</p>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
                 <div class="media block-6 services d-flex">
                     <div class="icon"><span class="flaticon-strategy"></span></div>
                     <div class="media-body">
-                        <h3 class="heading mb-3">Basic Tactics</h3>
+                        <h3 class="heading mb-3">Pencak Silat</h3>
                         <p>A small river named Duden flows by their place and supplies.</p>
                     </div>
                 </div>
@@ -70,10 +70,10 @@
                 <div class="carousel-team owl-carousel">
                     @foreach ($guru as $g)
                     <div class="item">
-                        <div class="team-wrap text-center">
+                        <div class="guru-wrap text-center">
                             <div class="img" style="background-image: url(/assets/images/orang.png);"></div>
                             <div class="text">
-                                <h3 class="mb-0">{{$g->name}}</h3>
+                                <h6 class="mb-0">{{$g->name}}</h6>
                                 <span class="position">{{$g->nip}}</span>
                             </div>
                         </div>

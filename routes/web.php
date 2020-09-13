@@ -15,14 +15,12 @@ use Illuminate\Support\Facades\Route;
 // HALAMAN COBA
 Route::resource('coba', 'CobaController');
 
-
+// WELCOME
 Route::get('/', 'WelcomeController@index')->name('home');
 Route::get('/post/{slug}', 'PostController@isi')->name('post.isi');
 
-Route::get('/login', function () {
-    return view('auth.login');
-})->name('login');
-
+// LOGIN
+Route::get('/login', 'LoginController@login')->name('login');
 Route::post('/postlogin', 'LoginController@postlogin')->name('postlogin');
 Route::get('/logout', 'LoginController@logout')->name('logout');
 
