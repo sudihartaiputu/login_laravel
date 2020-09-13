@@ -64,9 +64,9 @@
                     <div class="text-center w-full p-t-25 p-b-230">
                         <a href="#" class="txt1">
                             Lupa username & password
-                        </a>
+                        </a><br>
+                        <a href="{{route('home')}}">Beranda</a>
                     </div>
-
                     <div class="text-center w-full">
                         <a class="txt1" href="#">
                             Buat akun baru

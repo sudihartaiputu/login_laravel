@@ -16,9 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::resource('coba', 'CobaController');
 
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+Route::get('/', 'WelcomeController@index')->name('home');
+Route::get('/post/{slug}', 'PostController@isi')->name('post.isi');
+
 Route::get('/login', function () {
     return view('auth.login');
 })->name('login');

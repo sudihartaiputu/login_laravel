@@ -1,100 +1,116 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Laravel</title>
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
-    <!-- Styles -->
-    <style>
-        html,
-        body {
-            background-color: #fff;
-            color: #636b6f;
-            font-family: 'Nunito', sans-serif;
-            font-weight: 200;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .full-height {
-            height: 100vh;
-        }
-
-        .flex-center {
-            align-items: center;
-            display: flex;
-            justify-content: center;
-        }
-
-        .position-ref {
-            position: relative;
-        }
-
-        .top-right {
-            position: absolute;
-            right: 10px;
-            top: 18px;
-        }
-
-        .content {
-            text-align: center;
-        }
-
-        .title {
-            font-size: 84px;
-        }
-
-        .links>a {
-            color: #636b6f;
-            padding: 0 25px;
-            font-size: 13px;
-            font-weight: 600;
-            letter-spacing: .1rem;
-            text-decoration: none;
-            text-transform: uppercase;
-        }
-
-        .m-b-md {
-            margin-bottom: 30px;
-        }
-    </style>
-</head>
-
-<body>
-    <div class="flex-center position-ref full-height">
-        @if (Route::has('login'))
-        <div class="top-right links">
-            @auth
-            @else
-            <a href="{{ route('login') }}">Login</a>
-            <a href="{{ route('logout') }}">Logout</a>
-            @endauth
-        </div>
-        @endif
-
-        <div class="content">
-            <div class="title m-b-md">
-                SMANEV Laravel
-            </div>
-
-            <div class="links">
-                <a href="{{route('beranda.admin')}}">Beranda</a>
-                <a href="https://laracasts.com">Laracasts</a>
-                <a href="https://laravel-news.com">News</a>
-                <a href="https://blog.laravel.com">Blog</a>
-                <a href="https://nova.laravel.com">Nova</a>
-                <a href="https://forge.laravel.com">Forge</a>
-                <a href="https://vapor.laravel.com">Vapor</a>
-                <a href="https://github.com/laravel/laravel">GitHub</a>
+@include('layouts.home.navbar')
+<!-- HEADER -->
+<section class="hero-wrap hero-wrap-2" style="background-image: url('public/assets/welcome/images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
+            <div class="col-md-7 ftco-animate mt-5" data-scrollax=" properties: { translateY: '70%' }">
+                <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Malangke Gemilang</h1>
+                <p class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">SMA Negeri 11 Luwu Utara Terdepan dalam Inovasi </p>
             </div>
         </div>
     </div>
-</body>
+</section>
+<!-- FASILITAS -->
+<section class="ftco-section services-section bg-light">
+    <div class="container">
+        <div class="row d-flex">
+            <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services d-flex">
+                    <div class="icon"><span class="flaticon-american-football"></span></div>
+                    <div class="media-body">
+                        <h3 class="heading mb-3">Senior Team</h3>
+                        <p>A small river named Duden flows by their place and supplies.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services d-flex">
+                    <div class="icon"><span class="flaticon-american-football-1"></span></div>
+                    <div class="media-body">
+                        <h3 class="heading mb-3">For Kids</h3>
+                        <p>A small river named Duden flows by their place and supplies.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services d-flex">
+                    <div class="icon"><span class="flaticon-lockers"></span></div>
+                    <div class="media-body">
+                        <h3 class="heading mb-3">Football Schools</h3>
+                        <p>A small river named Duden flows by their place and supplies.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services d-flex">
+                    <div class="icon"><span class="flaticon-strategy"></span></div>
+                    <div class="media-body">
+                        <h3 class="heading mb-3">Basic Tactics</h3>
+                        <p>A small river named Duden flows by their place and supplies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- GURU -->
+<section class="ftco-section ftco-team img" style="background-image:url('public/assets/welcome/images/bg_3.jpg');" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row justify-content-center pb-5">
+            <div class="col-md-12 heading-section heading-section-white text-center ftco-animate">
+                <span class="subheading">Personil UPT SMAN 11 Luwu Utara</span>
+                <h2 class="mb-2">Tenaga<span> Pendidik & Kependidikan</span></h2>
+                <p>Bersama Menuju Malangke Gemilang</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 ftco-animate">
+                <div class="carousel-team owl-carousel">
+                    @foreach ($guru as $g)
+                    <div class="item">
+                        <div class="team-wrap text-center">
+                            <div class="img" style="background-image: url(/assets/images/orang.png);"></div>
+                            <div class="text">
+                                <h3 class="mb-0">{{$g->name}}</h3>
+                                <span class="position">{{$g->nip}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+</section>
 
-</html>
+<section class="ftco-section">
+    <div class="container">
+        <div class="row d-flex">
+            @foreach ($posts as $post)
+            <div class="col-md-6 col-lg-3 ftco-animate">
+                <div class="blog-entry justify-content-end">
+                    <a href="{{ route ('post.isi', $post->slug) }}" class="block-20" style="background-image: url('{{$post->gambar}}');">
+                    </a>
+                    <div class="text mt-3 float-right d-block">
+                        <div class="d-flex align-items-center p-2 pr-3 mb-4 topp">
+                            <div class="one">
+                                <span class="day mr-1">{{$post->created_at->day}}</span>
+                            </div>
+                            <div class="two">
+                                <span class="yr">{{$post->created_at->year}}</span>
+                                <span class="mos">{{$post->created_at->month}}</span>
+                            </div>
+                        </div>
+                        <h3 class="heading"><a href="#">{{$post->judul}}</a></h3>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+
+            <!-- BLOG -->
+        </div>
+
+    </div>
+</section>
+@include('layouts.home.footer')

@@ -169,4 +169,12 @@ class PostController extends Controller
         $post->forceDelete();
         return redirect()->back()->with('sukses', 'Postingan berhasil di Hapus Permanen');
     }
+    public function isi($slug)
+    {
+        $postsemua = Posts::orderBy('created_at', 'desc')->paginate(4);
+        $kategori = Kategori::all();
+        $data = Posts::where('slug', $slug)->get();
+        // dd($materi);
+        return view('isi', compact('data', 'postsemua', 'kategori'));
+    }
 }
