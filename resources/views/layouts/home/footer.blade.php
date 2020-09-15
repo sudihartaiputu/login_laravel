@@ -8,7 +8,7 @@
                     <h2 class="ftco-heading-2">SMANEV</h2>
                     <p>UPT SMA Negeri 11 Luwu Utara</p>
                     <ul class="ftco-footer-social list-unstyled float-md-left float-lft">
-                        <li class="ftco-animate"><a href="#"><span class="icon-whatsapp"></span></a></li>
+                        <li class="ftco-animate"><a href="https://api.whatsapp.com/send?phone=6282195957310&text=Info"><span class="icon-whatsapp"></span></a></li>
                         <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
                         <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
                     </ul>
@@ -63,8 +63,6 @@
 <script src="{{asset('public/assets/welcome/js/jquery.animateNumber.min.js')}}"></script>
 <script src="{{asset('public/assets/welcome/js/bootstrap-datepicker.js')}}"></script>
 <script src="{{asset('public/assets/welcome/js/scrollax.min.js')}}"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-<script src="{{asset('public/assets/welcome/js/google-map.js')}}"></script>
 <script src="{{asset('public/assets/welcome/js/main.js')}}"></script>
 
 </body>

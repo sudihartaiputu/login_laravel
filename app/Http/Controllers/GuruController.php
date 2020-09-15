@@ -26,14 +26,16 @@ class GuruController extends Controller
         $this->validate($request, [
             'name' => 'required|min:3|max:100',
             'nik' => 'required|numeric|min:3',
-            'nip' => 'required|numeric|min:3',
             'tempat_lahir' => 'required',
             'tanggal_lahir' => 'required',
             'jk' => 'required',
             'email' => 'required|email',
-            'level' => 'required'
+            'level' => 'required',
+            'foto' => 'required'
         ]);
-        Guru::create([
+        $foto = $request->foto;
+        $new_foto = time() . "_" . $foto->getClientOriginalName();
+        $guru = Guru::create([
             'name' => $request->name,
             'email' => $request->email,
             'nik' => $request->nik,
@@ -41,10 +43,13 @@ class GuruController extends Controller
             'tempat_lahir' => $request->tempat_lahir,
             'tanggal_lahir' => $request->tanggal_lahir,
             'jk' => $request->jk,
+            'foto' => 'public/upload/guru/' . $new_foto,
             'level' => $request->level,
             'password' => bcrypt('smanev'),
             'sandi' => 'smanev'
         ]);
+
+        $foto->move('public/upload/guru/', $new_foto);
         return redirect('guru')->with('sukses', 'Guru berhasil ditambah!');
     }
 
@@ -69,7 +74,8 @@ class GuruController extends Controller
             'tanggal_lahir' => 'required',
             'jk' => 'required',
             'email' => 'required|email',
-            'level' => 'required'
+            'level' => 'required',
+
         ]);
         $guru_data = [
             'name' => $request->name,
@@ -96,10 +102,7 @@ class GuruController extends Controller
     }
 
     // AUTH GURU
-    public function guruprofile()
-    {
-        return view('guru.profile');
-    }
+
     public function gurukelas()
     {
         $kelasajar = Auth::user()->load('gurukelas');

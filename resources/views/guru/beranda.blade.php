@@ -11,7 +11,7 @@
                 <div class="card card-primary card-outline">
                     <div class="card-body box-profile">
                         <div class="text-center">
-                            <img class="profile-user-img img-fluid img-circle" src="{{asset('public/assets/admin/dist/img/user2-160x160.jpg')}}" alt="User profile picture">
+                            <img class="profile-user-img img-fluid img-circle" src="{{ Auth::user()->foto }}" alt="User profile picture">
                         </div>
 
                         <h3 class="profile-username text-center"></h3>
@@ -61,7 +61,9 @@
                     <div class="card-body">
                         <div class="tab-content">
                             <div class="active tab-pane" id="biodata">
-                                <form class="form-horizontal">
+                                <form class="form-horizontal" action="{{ route('profil.update', Auth::user()->id )}}" method="POST" enctype="multipart/form-data">
+                                    @csrf
+                                    @method('patch')
                                     <div class="form-group row">
                                         <label for="inputtext" class="col-sm-2 col-form-label">NIK</label>
                                         <div class="col-sm-10">
@@ -109,7 +111,7 @@
                                     </div>
                                     <div class="form-group row">
                                         <div class="offset-sm-2 col-sm-10">
-                                            <button type="submit" class="btn btn-danger">Simpan</button>
+                                            <button type="submit" class="btn btn-warning">Simpan</button>
                                         </div>
                                     </div>
                                 </form>

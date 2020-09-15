@@ -17,7 +17,7 @@
         <div class="row d-flex">
             <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
                 <div class="media block-6 services d-flex">
-                    <div class="icon"><span class="flaticon-american-football"></span></div>
+                    <div class="icon"><img src="{{asset('public/img/pramuka.png')}}" style="width:70px;height:70px" alt=""></div>
                     <div class="media-body">
                         <h3 class="heading mb-3">Pramuka</h3>
                         <p>A small river named Duden flows by their place and supplies.</p>
@@ -26,7 +26,7 @@
             </div>
             <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
                 <div class="media block-6 services d-flex">
-                    <div class="icon"><span class="flaticon-american-football-1"></span></div>
+                    <div class="icon"><img src="{{asset('public/img/paskibra.png')}}" style="width:70px;height:70px" alt=""></div>
                     <div class="media-body">
                         <h3 class="heading mb-3">Paskibraka</h3>
                         <p>A small river named Duden flows by their place and supplies.</p>
@@ -35,16 +35,16 @@
             </div>
             <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
                 <div class="media block-6 services d-flex">
-                    <div class="icon"><span class="flaticon-lockers"></span></div>
+                    <div class="icon"><img src="{{asset('public/img/PMI.png')}}" style="width:70px;height:70px" alt=""></div>
                     <div class="media-body">
-                        <h3 class="heading mb-3">PMR & PMI</h3>
+                        <h3 class="heading mb-3">PMR</h3>
                         <p>A small river named Duden flows by their place and supplies.</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
                 <div class="media block-6 services d-flex">
-                    <div class="icon"><span class="flaticon-strategy"></span></div>
+                    <div class="icon"><img src="{{asset('public/img/pencaksilat.png')}}" style="width:70px;height:70px" alt=""></div>
                     <div class="media-body">
                         <h3 class="heading mb-3">Pencak Silat</h3>
                         <p>A small river named Duden flows by their place and supplies.</p>
@@ -71,7 +71,7 @@
                     @foreach ($guru as $g)
                     <div class="item">
                         <div class="guru-wrap text-center">
-                            <div class="img" style="background-image: url(/assets/images/orang.png);"></div>
+                            <div class="img" style="background-image: url('{{asset($g->foto)}}');"></div>
                             <div class="text">
                                 <h6 class="mb-0">{{$g->name}}</h6>
                                 <span class="position">{{$g->nip}}</span>
@@ -99,7 +99,7 @@
                             </div>
                             <div class="two">
                                 <span class="yr">{{$post->created_at->year}}</span>
-                                <span class="mos">{{$post->created_at->month}}</span>
+                                <span class="mos">{{date('F', strtotime($post->created_at))}}</span>
                             </div>
                         </div>
                         <h3 class="heading"><a href="#">{{$post->judul}}</a></h3>

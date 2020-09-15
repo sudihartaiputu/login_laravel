@@ -16,4 +16,8 @@ class WelcomeController extends Controller
         $posts = Posts::orderBy('created_at', 'desc')->get();
         return view('welcome', compact('kategori', 'posts', 'guru'));
     }
+    public function kontak()
+    {
+        return view('kontak');
+    }
 }

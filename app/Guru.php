@@ -33,6 +33,7 @@ class Guru extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
     public function gurukelas()
     {
         return $this->hasMany('App\Gurukelas', 'guru_id');

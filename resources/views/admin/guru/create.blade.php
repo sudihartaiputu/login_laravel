@@ -21,7 +21,7 @@
 
                         @endforeach
                         @endif
-                        <form action="{{ route('guru.store') }}" method="POST">
+                        <form action="{{ route('guru.store') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
                                 <label for="exampleInput1">NIK</label>
@@ -61,6 +61,12 @@
                             <div class="form-group">
                                 <label for="exampleInput1">Email</label>
                                 <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                            </div>
+                            <div class=" form-group">
+                                <label for="inputEmail" class="col-sm-2 col-form-label">Foto</label>
+                                <div class="col-sm-10">
+                                    <input type="file" class="form-control" id="foto" name="foto">
+                                </div>
                             </div>
                             <div class="form-group">
                                 <button class="btn btn-primary float-right">Simpan</button>

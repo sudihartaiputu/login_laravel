@@ -180,7 +180,7 @@
                     <div class="block-21 mb-4 d-flex">
                         <a class="blog-img mr-4" style="background-image: url('{{asset($postall->gambar)}}');"></a>
                         <div class="text">
-                            <h3 class="heading"><a href="{{ route ('post.isi', $post->slug) }}">{{$postall->judul}}</a></h3>
+                            <h3 class="heading"><a href="{{ route ('post.isi', $postall->slug) }}">{{$postall->judul}}</a></h3>
                             <div class="meta">
                                 <div><a href=""><span class="icon-calendar"></span> {{$postall->created_at->diffForHumans()}}</a></div>
                                 <div><a href="#"><span class="icon-person"></span> {{$postall->users->name}}</a></div>
@@ -206,7 +206,7 @@
                     </div>
 
                     <div class="sidebar-box ftco-animate">
-                        <h3 class="heading-name">Paragraph</h3>
+                        <h3 class="heading-name">Iklan</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque, autem necessitatibus voluptate quod mollitia delectus aut, sunt placeat nam vero culpa sapiente consectetur similique, inventore eos fugit cupiditate numquam!</p>
                     </div>
                 </div>

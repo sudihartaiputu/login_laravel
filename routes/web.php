@@ -17,7 +17,8 @@ Route::resource('coba', 'CobaController');
 
 // WELCOME
 Route::get('/', 'WelcomeController@index')->name('home');
-Route::get('/post/{slug}', 'PostController@isi')->name('post.isi');
+Route::get('/kontak', 'WelcomeController@kontak')->name('kontak');
+Route::get('/post/isi/{slug}', 'PostController@isi')->name('post.isi');
 
 // LOGIN
 Route::get('/login', 'LoginController@login')->name('login');
@@ -57,6 +58,8 @@ Route::group(['middleware' => ['auth:user']], function () {
 });
 // GURU
 Route::group(['middleware' => ['auth:guru']], function () {
+    Route::patch('/beranda/profil/edit/{id}', 'BerandaController@profil')->name('profil.edit');
+    Route::patch('/beranda/profil/{id}', 'BerandaController@profil')->name('profil.update');
     // MATERI
     Route::get('/gurumateri/sampah', 'MateriController@sampah')->name('gurumateri.sampah');
     Route::get('/gurumateri/restore/{id}', 'MateriController@restore')->name('gurumateri.restore');
