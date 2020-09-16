@@ -11,4 +11,8 @@ class Kategori extends Model
         'nama',
         'slug'
     ];
+    public function posts()
+    {
+        return $this->hasMany('App\Posts');
+    }
 }

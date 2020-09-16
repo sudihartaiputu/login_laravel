@@ -169,7 +169,7 @@
                     <div class="categories">
                         <h3 class="heading-name">Kategori</h3>
                         @foreach ($kategori as $kat)
-                        <li><a href="#">{{$kat->nama}} <span>(12)</span></a></li>
+                        <li><a href="#">{{$kat->nama}} <span>{{$kat->posts->count()}}</span></a></li>
                         @endforeach
                     </div>
                 </div>
@@ -182,26 +182,19 @@
                         <div class="text">
                             <h3 class="heading"><a href="{{ route ('post.isi', $postall->slug) }}">{{$postall->judul}}</a></h3>
                             <div class="meta">
-                                <div><a href=""><span class="icon-calendar"></span> {{$postall->created_at->diffForHumans()}}</a></div>
-                                <div><a href="#"><span class="icon-person"></span> {{$postall->users->name}}</a></div>
-                                <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                                <div><span class="icon-calendar"></span> {{$postall->created_at->diffForHumans()}}</div>
+                                <div><span class="icon-person"></span> {{$postall->users->name}}</div>
+                                <div><span class="icon-chat"></span> 19</div>
                             </div>
                         </div>
                     </div>
                     @endforeach
-
-
                     <div class="sidebar-box ftco-animate">
                         <h3 class="heading-name">Tag Cloud</h3>
                         <div class="tagcloud">
-                            <a href="#" class="tag-cloud-link">dish</a>
-                            <a href="#" class="tag-cloud-link">menu</a>
-                            <a href="#" class="tag-cloud-link">food</a>
-                            <a href="#" class="tag-cloud-link">sweet</a>
-                            <a href="#" class="tag-cloud-link">tasty</a>
-                            <a href="#" class="tag-cloud-link">delicious</a>
-                            <a href="#" class="tag-cloud-link">desserts</a>
-                            <a href="#" class="tag-cloud-link">drinks</a>
+                            @foreach ($tags as $tag)
+                            <a href="#" class="tag-cloud-link">{{$tag->posts->name}}</a>
+                            @endforeach
                         </div>
                     </div>
 
