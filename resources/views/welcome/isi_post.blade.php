@@ -24,10 +24,11 @@
                 <p><?= $post->konten ?></p>
                 <div class="tag-widget post-tag-container mb-5 mt-5">
                     <div class="tagcloud">
-                        <a href="#" class="tag-cloud-link">Life</a>
-                        <a href="#" class="tag-cloud-link">Sport</a>
-                        <a href="#" class="tag-cloud-link">Tech</a>
-                        <a href="#" class="tag-cloud-link">Travel</a>
+                        @foreach ($data as $m => $hasil)
+                        @foreach ($hasil->tags as $tag)
+                        <li><a href="#">{{$tag->nama}}</a></li>
+                        @endforeach
+                        @endforeach
                     </div>
                 </div>
                 @endforeach
@@ -157,10 +158,10 @@
             </div> <!-- .col-md-8 -->
             <div class="col-lg-4 sidebar ftco-animate">
                 <div class="sidebar-box">
-                    <form action="#" class="search-form">
+                    <form action="{{route('post.cari')}}" method="get" class="search-form">
                         <div class="form-group">
                             <span class="icon icon-search"></span>
-                            <input type="text" class="form-control" placeholder="Type a keyword and hit enter">
+                            <input type="input" class="form-control" name="cari" placeholder="Ketik disini">
                         </div>
                     </form>
                 </div>
@@ -168,8 +169,8 @@
                 <div class="sidebar-box ftco-animate">
                     <div class="categories">
                         <h3 class="heading-name">Kategori</h3>
-                        @foreach ($kategori as $kat)
-                        <li><a href="#">{{$kat->nama}} <span>{{$kat->posts->count()}}</span></a></li>
+                        @foreach ($kategori_widget as $kat)
+                        <li><a href="{{route('post.kategori',$kat->slug)}}">{{$kat->nama}} <span>{{$kat->posts->count()}}</span></a></li>
                         @endforeach
                     </div>
                 </div>
@@ -192,15 +193,17 @@
                     <div class="sidebar-box ftco-animate">
                         <h3 class="heading-name">Tag Cloud</h3>
                         <div class="tagcloud">
-                            @foreach ($tags as $tag)
-                            <a href="#" class="tag-cloud-link">{{$tag->posts->name}}</a>
+                            @foreach ($data as $t =>$hasil)
+                            @foreach($hasil->tags as $tag)
+                            <a href="#" class="tag-cloud-link">{{$tag->nama}}</a>
+                            @endforeach
                             @endforeach
                         </div>
                     </div>
 
                     <div class="sidebar-box ftco-animate">
                         <h3 class="heading-name">Iklan</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque, autem necessitatibus voluptate quod mollitia delectus aut, sunt placeat nam vero culpa sapiente consectetur similique, inventore eos fugit cupiditate numquam!</p>
+                        <p>Silahkan Hubungi Pengembang untuk memasang Iklan disini</p>
                     </div>
                 </div>
 

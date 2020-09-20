@@ -172,9 +172,30 @@ class PostController extends Controller
     public function isi($slug)
     {
         $postsemua = Posts::orderBy('created_at', 'desc')->paginate(4);
-        $kategori = Kategori::all();
+        $kategori_widget = Kategori::all();
+        $tags = Tags::all();
         $data = Posts::where('slug', $slug)->get();
         // dd($materi);
-        return view('isi', compact('data', 'postsemua', 'kategori'));
+        return view('welcome.isi_post', compact('data', 'postsemua', 'kategori_widget', 'tags'));
+    }
+    public function list_post()
+    {
+        $kategori_widget = Kategori::all();
+        $data = Posts::latest()->paginate(8);
+
+        // dd($materi);
+        return view('welcome.list_post', compact('data', 'kategori_widget'));
+    }
+    public function list_kategori(kategori $kategori)
+    {
+        $kategori_widget = Kategori::all();
+        $data = $kategori->posts()->paginate();
+        return view('welcome.list_post', compact('data', 'kategori_widget'));
+    }
+    public function cari(Request $request)
+    {
+        $kategori_widget = Kategori::all();
+        $data = Posts::where('judul', $request->cari)->orWhere('judul', 'like', '%' . $request->cari . '%')->paginate(8);
+        return view('welcome.list_post', compact('data', 'kategori_widget'));
     }
 }

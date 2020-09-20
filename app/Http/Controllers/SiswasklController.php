@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Siswaskl;
+use Illuminate\Support\Facades\Storage;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Imports\SiswasklImport;
 
 class SiswasklController extends Controller
 {
@@ -80,7 +83,8 @@ class SiswasklController extends Controller
      */
     public function edit($id)
     {
-        //
+        $siswaskl = Siswaskl::findorfail($id);
+        return view('admin.skl.edit', compact('siswaskl'));
     }
 
     /**
@@ -103,6 +107,36 @@ class SiswasklController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $siswaskl = Siswaskl::findorfail($id);
+        $siswaskl->delete();
+        return redirect()->back()->with('sukses', 'Siswa berhasil di hapus');
+    }
+    public function import(Request $request)
+    {
+        $this->validate($request, [
+            'file' => 'required|mimes:csv,xls,xlsx'
+        ]);
+
+        $file = $request->file('file');
+
+        // membuat nama file unik
+        $nama_file = $file->hashName();
+
+        //temporary file
+        $path = $file->storeAs('public/excel/siswaskl/', $nama_file);
+
+        // import data
+        $import = Excel::import(new SiswasklImport(), storage_path('app/public/excel/siswaskl/' . $nama_file));
+
+        //remove from server
+        Storage::delete($path);
+
+        if ($import) {
+            //redirect
+            return redirect()->route('siswaskl.index')->with(['sukses' => 'Data Berhasil Diimport!']);
+        } else {
+            //redirect
+            return redirect()->route('siswaskl.index')->with(['error' => 'Data Gagal Diimport!']);
+        }
     }
 }

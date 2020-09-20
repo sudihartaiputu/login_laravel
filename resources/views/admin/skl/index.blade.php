@@ -20,6 +20,11 @@
 
                         @endif
                         <a class="btn btn-primary btn-sm mb-3" href="{{ route('siswaskl.create')}}">Tambah Siswa</a>
+                        <!-- IMPORT -->
+                        <button type="button" class="btn btn-success btn-sm mb-3" data-toggle="modal" data-target="#import">
+                            IMPORT
+                        </button>
+                        <!-- END IMPORT -->
                         <table id="example2" class="table table-bordered table-hover">
                             <thead>
                                 <tr>
@@ -47,8 +52,6 @@
                                             @method('delete')
                                             <a class="fas fa-edit btn btn-primary btn-sm" href="{{route ('siswaskl.edit', $hasil->id)}}"></a>
                                             <button type="submit" class="fas fa-trash-alt btn btn-danger btn-sm"></button>
-                                            <a class="fas fa-id-card btn btn-success btn-sm" href=""></a>
-
                                         </form>
                                     </td>
                                 </tr>
@@ -65,7 +68,33 @@
 <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
-
+<!-- modal import -->
+<div class="modal fade" id="import" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">IMPORT DATA</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="{{route('siswaskl.import')}}" method="POST" enctype="multipart/form-data">
+                @csrf
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>PILIH FILE</label>
+                        <input type="file" name="file" class="form-control" required>
+                    </div>
+                    <p>Silahkan Download Template</p><a class="btn btn-primary btn-sm" href="{{asset('public/template/siswaskl.xlsx')}}">Template</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">TUTUP</button>
+                    <button type="submit" class="btn btn-success">IMPORT</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
 
 

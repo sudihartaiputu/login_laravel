@@ -18,6 +18,6 @@ class WelcomeController extends Controller
     }
     public function kontak()
     {
-        return view('kontak');
+        return view('welcome.kontak');
     }
 }

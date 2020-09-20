@@ -40,7 +40,7 @@
     </header>
     <!-- Header section end -->
     <?php
-    $akhir  = new DateTime($setting['tgl_pengumuman']); //Waktu awal
+    $akhir  = new DateTime(); //Waktu awal
     $awal = new DateTime(); // Waktu sekarang atau akhir
     $diff  = $awal->diff($akhir);
 
@@ -75,14 +75,7 @@
                             <?php } ?>
                         </div>
                         <span id="keterangan" class="keter  animated tada ">
-                            <?php if ($siswaskl['keterangan'] == 1) {
-                                echo "LULUS";
-                            } elseif ($siswaskl['keterangan'] == 2) {
-                                echo "PANGGILAN";
-                            } else {
-                                echo "TIDAK LULUS";
-                            }
-                            ?>
+
                         </span>
                     </div>
                 </div>

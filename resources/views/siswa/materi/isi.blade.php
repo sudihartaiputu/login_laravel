@@ -14,10 +14,11 @@
         </div>
         <div class="col-lg-3  col-md-3 meta-details">
             <ul class="tags">
-                <li><a href="#">Food,</a></li>
-                <li><a href="#">Technology,</a></li>
-                <li><a href="#">Politics,</a></li>
-                <li><a href="#">Lifestyle</a></li>
+                @foreach ($data as $m => $hasil)
+                @foreach ($hasil->kelas as $kls)
+                <li><a href="#">{{$kls->nama}}</a></li>
+                @endforeach
+                @endforeach
             </ul>
             <div class="user-details row">
                 <p class="user-name col-lg-12 col-md-12 col-6"><a href="#">{{$hasil->guru->name}}</a> <span class="fa fa-user"></span></p>

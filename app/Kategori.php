@@ -15,4 +15,8 @@ class Kategori extends Model
     {
         return $this->hasMany('App\Posts');
     }
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }

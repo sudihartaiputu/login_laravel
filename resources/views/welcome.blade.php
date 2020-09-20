@@ -102,7 +102,7 @@
                                 <span class="mos">{{date('F', strtotime($post->created_at))}}</span>
                             </div>
                         </div>
-                        <h3 class="heading"><a href="#">{{$post->judul}}</a></h3>
+                        <h3 class="heading"><a href="{{ route ('post.isi', $post->slug) }}">{{$post->judul}}</a></h3>
                     </div>
                 </div>
             </div>

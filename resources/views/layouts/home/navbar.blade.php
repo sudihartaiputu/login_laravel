@@ -34,7 +34,7 @@
                     <li class="nav-item active"><a href="{{route('home')}}" class="nav-link">Beranda</a></li>
                     <li class="nav-item"><a href="about.html" class="nav-link">Profil</a></li>
                     <li class="nav-item"><a href="games.html" class="nav-link">Sejarah</a></li>
-                    <li class="nav-item"><a href="blog.html" class="nav-link">Berita</a></li>
+                    <li class="nav-item"><a href="{{route('post.list')}}" class="nav-link">Berita</a></li>
                     <li class="nav-item"><a href="{{route('kontak')}}" class="nav-link">Hubungi kami</a></li>
                     <li class="nav-item cta"><a href="{{route('login')}}" class="nav-link">Login</a></li>
 

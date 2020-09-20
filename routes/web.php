@@ -18,7 +18,10 @@ Route::resource('coba', 'CobaController');
 // WELCOME
 Route::get('/', 'WelcomeController@index')->name('home');
 Route::get('/kontak', 'WelcomeController@kontak')->name('kontak');
+Route::get('/post/list_post/', 'PostController@list_post')->name('post.list');
 Route::get('/post/isi/{slug}', 'PostController@isi')->name('post.isi');
+Route::get('/list-kategori/{kategori}', 'PostController@list_kategori')->name('post.kategori');
+Route::get('/cari', 'PostController@cari')->name('post.cari');
 
 // LOGIN
 Route::get('/login', 'LoginController@login')->name('login');
@@ -46,6 +49,7 @@ Route::group(['middleware' => ['auth:user']], function () {
     Route::resource('/mapel', 'MapelController');
     // SISWASKL
     Route::resource('/siswaskl', 'SiswasklController');
+    Route::post('/siswaskl/import', 'SiswasklController@import')->name('siswaskl.import');
     // KATEGORI
     Route::resource('/kategori', 'KategoriController');
     // TAG

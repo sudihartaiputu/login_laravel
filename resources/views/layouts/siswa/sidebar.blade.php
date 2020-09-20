@@ -7,14 +7,14 @@
             </form>
         </div>
         <div class="single-sidebar-widget user-info-widget">
-            @foreach ($data as $profil)
-            <img src="img/blog/user-info.png" alt="">
+            @foreach ($data as $profil=>$hasil)
+            <img src="{{$hasil->guru->foto}}" alt="">
             <a href="#">
-                <h4>{{$profil->guru->name}}</h4>
+                <h4>{{$hasil->guru->name}}</h4>
             </a>
             <p>
                 Guru Mata Pelajaran <br>
-                {{$profil->mapel->nama}}
+                {{$hasil->mapel->nama}}
             </p>
             <ul class="social-links">
                 <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
