@@ -5,7 +5,7 @@
     <!-- Mobile Specific Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon-->
-    <link rel="shortcut icon" href="{{asset('public/assets/siswa/img/favicon.png')}}">
+    <link rel="shortcut icon" href="{{asset('assets/siswa/img/favicon.png')}}">
     <!-- Author Meta -->
     <meta name="author" content="colorlib">
     <!-- Meta Description -->
@@ -22,15 +22,15 @@
 			CSS
             ============================================= -->
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{ asset('public/assets/admin/plugins/fontawesome-free/css/all.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('public/assets/siswa/css/linearicons.css') }}">
-    <link rel="stylesheet" href="{{ asset('public/assets/siswa/css/bootstrap.css') }}">
-    <link rel="stylesheet" href="{{ asset('public/assets/siswa/css/magnific-popup.css') }}">
-    <link rel="stylesheet" href="{{ asset('public/assets/siswa/css/nice-select.css') }}">
-    <link rel="stylesheet" href="{{ asset('public/assets/siswa/css/animate.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('public/assets/siswa/css/owl.carousel.css') }}">
-    <link rel="stylesheet" href="{{ asset('public/assets/siswa/css/jquery-ui.css') }}">
-    <link rel="stylesheet" href="{{ asset('public/assets/siswa/css/main.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/admin/plugins/fontawesome-free/css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/siswa/css/linearicons.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/siswa/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/siswa/css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/siswa/css/nice-select.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/siswa/css/animate.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/siswa/css/owl.carousel.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/siswa/css/jquery-ui.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/siswa/css/main.css') }}">
 </head>
 
 <body>
@@ -377,20 +377,20 @@
 
 
 
-    <script src="{{asset('public/assets/siswa/js/vendor/jquery-2.2.4.min.js')}}"></script>
-    <script src="{{asset('public/assets/siswa/js/popper.min.js')}}" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="{{asset('public/assets/siswa/js/vendor/bootstrap.min.js')}}"></script>
+    <script src="{{asset('assets/siswa/js/vendor/jquery-2.2.4.min.js')}}"></script>
+    <script src="{{asset('assets/siswa/js/popper.min.js')}}" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="{{asset('assets/siswa/js/vendor/bootstrap.min.js')}}"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
-    <script src="{{asset('public/assets/siswa/js/easing.min.js')}}"></script>
-    <script src="{{asset('public/assets/siswa/js/hoverIntent.js')}}"></script>
-    <script src="{{asset('public/assets/siswa/js/superfish.min.js')}}"></script>
-    <script src="{{asset('public/assets/siswa/js/jquery.ajaxchimp.min.js')}}"></script>
-    <script src="{{asset('public/assets/siswa/js/jquery.magnific-popup.min.js')}}"></script>
-    <script src="{{asset('public/assets/siswa/js/jquery.tabs.min.js')}}"></script>
-    <script src="{{asset('public/assets/siswa/js/jquery.nice-select.min.js')}}"></script>
-    <script src="{{asset('public/assets/siswa/js/owl.carousel.min.js')}}"></script>
-    <script src="{{asset('public/assets/siswa/js/mail-script.js')}}"></script>
-    <script src="{{asset('public/assets/siswa/js/main.js')}}"></script>
+    <script src="{{asset('assets/siswa/js/easing.min.js')}}"></script>
+    <script src="{{asset('assets/siswa/js/hoverIntent.js')}}"></script>
+    <script src="{{asset('assets/siswa/js/superfish.min.js')}}"></script>
+    <script src="{{asset('assets/siswa/js/jquery.ajaxchimp.min.js')}}"></script>
+    <script src="{{asset('assets/siswa/js/jquery.magnific-popup.min.js')}}"></script>
+    <script src="{{asset('assets/siswa/js/jquery.tabs.min.js')}}"></script>
+    <script src="{{asset('assets/siswa/js/jquery.nice-select.min.js')}}"></script>
+    <script src="{{asset('assets/siswa/js/owl.carousel.min.js')}}"></script>
+    <script src="{{asset('assets/siswa/js/mail-script.js')}}"></script>
+    <script src="{{asset('assets/siswa/js/main.js')}}"></script>
 </body>
 
 </html>

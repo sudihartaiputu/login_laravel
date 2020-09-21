@@ -29,10 +29,10 @@
                             <thead>
                                 <tr>
                                     <th width="5%">No</th>
-                                    <th style="text-align:center">NIS</th>
+                                    <th style="text-align:center">NISN</th>
                                     <th style="text-align:center">Nama Siswa</th>
                                     <th style="text-align:center">Email</th>
-                                    <th style="text-align:center" width="10%">Hak Akses</th>
+                                    <th style="text-align:center" width="10%">Keterangan</th>
                                     <th width="15%" style="text-align:center">Aksi</th>
                                 </tr>
                             </thead>
@@ -40,11 +40,12 @@
                                 @foreach ($siswaskl as $result => $hasil)
                                 <tr>
                                     <td>{{$result + $siswaskl->firstitem() }}</td>
-                                    <td>{{$hasil->nis}}</td>
+                                    <td>{{$hasil->nisn}}</td>
                                     <td>{{$hasil->name}}
                                     <td>{{$hasil->email}}
-                                    <td>@if($hasil->level == 'siswa')<span class="badge badge-primary">Siswa</span>@endif
-                                        @if($hasil->level == 'alumni')<span class="badge badge-warning">Alumni</span>@endif
+                                    <td>@if($hasil->keterangan == '0')<span class="badge badge-danger">Tidak Lulus</span>@endif
+                                        @if($hasil->keterangan == '1')<span class="badge badge-primary">Lulus</span>@endif
+                                        @if($hasil->keterangan == '2')<span class="badge badge-warning">Lulus Bersyarat</span>@endif
 
                                     <td style="text-align:center">
                                         <form action="{{route('siswaskl.destroy', $hasil->id)}}" method="POST">

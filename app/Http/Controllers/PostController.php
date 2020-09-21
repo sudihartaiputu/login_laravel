@@ -55,14 +55,14 @@ class PostController extends Controller
             'kategori_id' => $request->kategori_id,
             'judul' => $request->judul,
             'konten' => $request->konten,
-            'gambar' => 'public/upload/posts/' . $new_gambar,
+            'gambar' => 'upload/posts/' . $new_gambar,
             'slug' => Str::slug($request->judul),
             'users_id' => Auth::id()
         ]);
 
         $post->tags()->attach($request->tags);
 
-        $gambar->move('public/upload/posts/', $new_gambar);
+        $gambar->move('upload/posts/', $new_gambar);
         return redirect('/post')->with('sukses', 'Postingan berhasil di simpan');
     }
 
@@ -113,13 +113,13 @@ class PostController extends Controller
             unlink($post->gambar);
             $gambar = $request->gambar;
             $new_gambar = time() . "_" . $gambar->getClientOriginalName();
-            $gambar->move('public/upload/posts/', $new_gambar);
+            $gambar->move('upload/posts/', $new_gambar);
 
             $post_data = [
                 'kategori_id' => $request->kategori_id,
                 'judul' => $request->judul,
                 'konten' => $request->konten,
-                'gambar' => 'public/upload/posts/' . $new_gambar,
+                'gambar' => 'upload/posts/' . $new_gambar,
                 'slug' => Str::slug($request->judul)
             ];
         } else {
@@ -175,6 +175,7 @@ class PostController extends Controller
         $kategori_widget = Kategori::all();
         $tags = Tags::all();
         $data = Posts::where('slug', $slug)->get();
+        if (!$data->count() > 0) return abort(404);
         // dd($materi);
         return view('welcome.isi_post', compact('data', 'postsemua', 'kategori_widget', 'tags'));
     }

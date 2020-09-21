@@ -18,6 +18,7 @@ Route::resource('coba', 'CobaController');
 // WELCOME
 Route::get('/', 'WelcomeController@index')->name('home');
 Route::get('/kontak', 'WelcomeController@kontak')->name('kontak');
+Route::get('/error', 'WelcomeController@error')->name('error');
 Route::get('/post/list_post/', 'PostController@list_post')->name('post.list');
 Route::get('/post/isi/{slug}', 'PostController@isi')->name('post.isi');
 Route::get('/list-kategori/{kategori}', 'PostController@list_kategori')->name('post.kategori');
@@ -31,6 +32,7 @@ Route::get('/logout', 'LoginController@logout')->name('logout');
 // ADMIN
 Route::group(['middleware' => ['auth:user']], function () {
     Route::get('/beranda', 'BerandaController@beranda')->name('beranda.admin');
+    Route::get('/beranda/error', 'BerandaController@adminerror')->name('admin.error');
     Route::resource('/user', 'UserController');
     // GURU
     Route::resource('/guru', 'GuruController');
@@ -62,6 +64,8 @@ Route::group(['middleware' => ['auth:user']], function () {
 });
 // GURU
 Route::group(['middleware' => ['auth:guru']], function () {
+    Route::get('/berandaguru', 'BerandaController@berandaguru')->name('beranda.guru');
+    Route::get('/guru/beranda/error', 'BerandaController@guruerror')->name('guru.error');
     Route::patch('/beranda/profil/edit/{id}', 'BerandaController@profil')->name('profil.edit');
     Route::patch('/beranda/profil/{id}', 'BerandaController@profil')->name('profil.update');
     // MATERI
@@ -70,7 +74,6 @@ Route::group(['middleware' => ['auth:guru']], function () {
     Route::delete('/gurumateri/kill/{id}', 'MateriController@kill')->name('gurumateri.kill');
     Route::resource('/gurumateri', 'MateriController');
     // END MATERI
-    Route::get('/berandaguru', 'BerandaController@berandaguru')->name('beranda.guru');
     Route::get('/gurukelas', 'GuruController@gurukelas')->name('guru.kelas');
     Route::get('/gurukelas/create', 'GuruController@gurukelascreate')->name('guru.kelas.create');
     Route::post('/gurukelas/store', 'GuruController@gurukelasstore')->name('guru.kelas.store');

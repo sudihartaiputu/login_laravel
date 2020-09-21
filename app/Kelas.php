@@ -17,6 +17,6 @@ class Kelas extends Model
     }
     public function siswa()
     {
-        return $this->belongsToMany('App\Siswa');
+        return $this->belongsTo('App\Siswa');
     }
 }

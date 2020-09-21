@@ -85,20 +85,20 @@
 </footer>
 <!-- End footer Area -->
 
-<script src="{{asset('public/assets/siswa/js/vendor/jquery-2.2.4.min.js')}}"></script>
-<script src="{{asset('public/assets/siswa/js/popper.min.js')}}" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="{{asset('public/assets/siswa/js/vendor/bootstrap.min.js')}}"></script>
+<script src="{{asset('assets/siswa/js/vendor/jquery-2.2.4.min.js')}}"></script>
+<script src="{{asset('assets/siswa/js/popper.min.js')}}" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="{{asset('assets/siswa/js/vendor/bootstrap.min.js')}}"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
-<script src="{{asset('public/assets/siswa/js/easing.min.js')}}"></script>
-<script src="{{asset('public/assets/siswa/js/hoverIntent.js')}}"></script>
-<script src="{{asset('public/assets/siswa/js/superfish.min.js')}}"></script>
-<script src="{{asset('public/assets/siswa/js/jquery.ajaxchimp.min.js')}}"></script>
-<script src="{{asset('public/assets/siswa/js/jquery.magnific-popup.min.js')}}"></script>
-<script src="{{asset('public/assets/siswa/js/jquery.tabs.min.js')}}"></script>
-<script src="{{asset('public/assets/siswa/js/jquery.nice-select.min.js')}}"></script>
-<script src="{{asset('public/assets/siswa/js/owl.carousel.min.js')}}"></script>
-<script src="{{asset('public/assets/siswa/js/mail-script.js')}}"></script>
-<script src="{{asset('public/assets/siswa/js/main.js')}}"></script>
+<script src="{{asset('assets/siswa/js/easing.min.js')}}"></script>
+<script src="{{asset('assets/siswa/js/hoverIntent.js')}}"></script>
+<script src="{{asset('assets/siswa/js/superfish.min.js')}}"></script>
+<script src="{{asset('assets/siswa/js/jquery.ajaxchimp.min.js')}}"></script>
+<script src="{{asset('assets/siswa/js/jquery.magnific-popup.min.js')}}"></script>
+<script src="{{asset('assets/siswa/js/jquery.tabs.min.js')}}"></script>
+<script src="{{asset('assets/siswa/js/jquery.nice-select.min.js')}}"></script>
+<script src="{{asset('assets/siswa/js/owl.carousel.min.js')}}"></script>
+<script src="{{asset('assets/siswa/js/mail-script.js')}}"></script>
+<script src="{{asset('assets/siswa/js/main.js')}}"></script>
 </body>
 
 </html>

@@ -13,9 +13,17 @@ class BerandaController extends Controller
     {
         return view('admin.beranda');
     }
+    public function adminerror()
+    {
+        return view('admin.error');
+    }
     public function berandaguru()
     {
         return view('guru.beranda');
+    }
+    public function guruerror()
+    {
+        return view('guru.error');
     }
     public function berandasiswa()
     {

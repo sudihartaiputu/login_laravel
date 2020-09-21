@@ -20,7 +20,7 @@
                     <div class="block-23 mb-3">
                         <ul>
                             <li><span class="icon icon-map-marker"></span><span class="text">Jln. Dg. Mangatta Desa Tolada</span></li>
-                            <li><a href="#"><span class="icon icon-phone"></span><span class="text">+6285242880901</span></a></li>
+                            <li><a href="https://api.whatsapp.com/send?phone=6282195957310&text=Info"><span class="icon icon-whatsapp"></span><span class="text">+6282195957310</span></a></li>
                             <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@sman11lutra.web.id</span></a></li>
                         </ul>
                     </div>
@@ -50,20 +50,20 @@
         <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg></div>
 
 
-<script src="{{asset('public/assets/welcome/js/jquery.min.js')}}"></script>
-<script src="{{asset('public/assets/welcome/js/jquery-migrate-3.0.1.min.js')}}"></script>
-<script src="{{asset('public/assets/welcome/js/popper.min.js')}}"></script>
-<script src="{{asset('public/assets/welcome/js/bootstrap.min.js')}}"></script>
-<script src="{{asset('public/assets/welcome/js/jquery.easing.1.3.js')}}"></script>
-<script src="{{asset('public/assets/welcome/js/jquery.waypoints.min.js')}}"></script>
-<script src="{{asset('public/assets/welcome/js/jquery.stellar.min.js')}}"></script>
-<script src="{{asset('public/assets/welcome/js/owl.carousel.min.js')}}"></script>
-<script src="{{asset('public/assets/welcome/js/jquery.magnific-popup.min.js')}}"></script>
-<script src="{{asset('public/assets/welcome/js/aos.js')}}"></script>
-<script src="{{asset('public/assets/welcome/js/jquery.animateNumber.min.js')}}"></script>
-<script src="{{asset('public/assets/welcome/js/bootstrap-datepicker.js')}}"></script>
-<script src="{{asset('public/assets/welcome/js/scrollax.min.js')}}"></script>
-<script src="{{asset('public/assets/welcome/js/main.js')}}"></script>
+<script src="{{asset('assets/welcome/js/jquery.min.js')}}"></script>
+<script src="{{asset('assets/welcome/js/jquery-migrate-3.0.1.min.js')}}"></script>
+<script src="{{asset('assets/welcome/js/popper.min.js')}}"></script>
+<script src="{{asset('assets/welcome/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('assets/welcome/js/jquery.easing.1.3.js')}}"></script>
+<script src="{{asset('assets/welcome/js/jquery.waypoints.min.js')}}"></script>
+<script src="{{asset('assets/welcome/js/jquery.stellar.min.js')}}"></script>
+<script src="{{asset('assets/welcome/js/owl.carousel.min.js')}}"></script>
+<script src="{{asset('assets/welcome/js/jquery.magnific-popup.min.js')}}"></script>
+<script src="{{asset('assets/welcome/js/aos.js')}}"></script>
+<script src="{{asset('assets/welcome/js/jquery.animateNumber.min.js')}}"></script>
+<script src="{{asset('assets/welcome/js/bootstrap-datepicker.js')}}"></script>
+<script src="{{asset('assets/welcome/js/scrollax.min.js')}}"></script>
+<script src="{{asset('assets/welcome/js/main.js')}}"></script>
 
 </body>
 

@@ -56,7 +56,7 @@ class MateriController extends Controller
             'mapel_id' => $request->mapel_id,
             'judul' => $request->judul,
             'konten' => $request->konten,
-            'gambar' => 'public/upload/materi/' . $new_gambar,
+            'gambar' => 'upload/materi/' . $new_gambar,
             'slug' => Str::slug($request->judul),
             'guru_id' => Auth::id(),
             'view' => '0'
@@ -64,7 +64,7 @@ class MateriController extends Controller
 
         $materi->kelas()->attach($request->kelas_id);
 
-        $gambar->move('public/upload/materi/', $new_gambar);
+        $gambar->move('upload/materi/', $new_gambar);
         return redirect('/gurumateri')->with('sukses', 'Materi berhasil di simpan');
     }
 
@@ -114,13 +114,13 @@ class MateriController extends Controller
             unlink($materi->gambar);
             $gambar = $request->gambar;
             $new_gambar = time() . "_" . $gambar->getClientOriginalName();
-            $gambar->move('public/upload/materi/', $new_gambar);
+            $gambar->move('upload/materi/', $new_gambar);
 
             $materi_data = [
                 'mapel_id' => $request->mapel_id,
                 'judul' => $request->judul,
                 'konten' => $request->konten,
-                'gambar' => 'public/upload/materi/' . $new_gambar,
+                'gambar' => 'upload/materi/' . $new_gambar,
                 'slug' => Str::slug($request->judul)
             ];
         } else {

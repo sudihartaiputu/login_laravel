@@ -5,7 +5,7 @@
     <!-- Mobile Specific Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon-->
-    <link rel="shortcut icon" href="{{asset('public/favicon.png')}}">
+    <link rel="shortcut icon" href="{{asset('favicon.png')}}">
     <!-- Author Meta -->
     <meta name="author" content="colorlib">
     <!-- Meta Description -->
@@ -21,15 +21,15 @@
     <!--
 			CSS
 			============================================= -->
-    <link rel="stylesheet" href="{{asset('public/assets/siswa/css/linearicons.css')}}">
-    <link rel="stylesheet" href="http://localhost/laravel_login/public/assets/admin/plugins/fontawesome-free/css/all.min.css">
-    <link rel="stylesheet" href="{{asset('public/assets/siswa/css/bootstrap.css')}}">
-    <link rel="stylesheet" href="{{asset('public/assets/siswa/css/magnific-popup.css')}}">
-    <link rel="stylesheet" href="{{asset('public/assets/siswa/css/nice-select.css')}}">
-    <link rel="stylesheet" href="{{asset('public/assets/siswa/css/animate.min.css')}}">
-    <link rel="stylesheet" href="{{asset('public/assets/siswa/css/owl.carousel.css')}}">
-    <link rel="stylesheet" href="{{asset('public/assets/siswa/css/jquery-ui.css')}}">
-    <link rel="stylesheet" href="{{asset('public/assets/siswa/css/main.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/siswa/css/linearicons.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/admin/plugins/fontawesome-free/css/all.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/siswa/css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/siswa/css/magnific-popup.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/siswa/css/nice-select.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/siswa/css/animate.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/siswa/css/owl.carousel.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/siswa/css/jquery-ui.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/siswa/css/main.css')}}">
 </head>
 
 <body>

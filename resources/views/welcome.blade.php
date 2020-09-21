@@ -1,6 +1,6 @@
 @include('layouts.home.navbar')
 <!-- HEADER -->
-<section class="hero-wrap hero-wrap-2" style="background-image: url('public/assets/welcome/images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+<section class="hero-wrap hero-wrap-2" style="background-image: url('assets/welcome/images/bg_1.jpg');" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
@@ -17,7 +17,7 @@
         <div class="row d-flex">
             <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
                 <div class="media block-6 services d-flex">
-                    <div class="icon"><img src="{{asset('public/img/pramuka.png')}}" style="width:70px;height:70px" alt=""></div>
+                    <div class="icon"><img src="{{asset('img/pramuka.png')}}" style="width:70px;height:70px" alt=""></div>
                     <div class="media-body">
                         <h3 class="heading mb-3">Pramuka</h3>
                         <p>A small river named Duden flows by their place and supplies.</p>
@@ -26,7 +26,7 @@
             </div>
             <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
                 <div class="media block-6 services d-flex">
-                    <div class="icon"><img src="{{asset('public/img/paskibra.png')}}" style="width:70px;height:70px" alt=""></div>
+                    <div class="icon"><img src="{{asset('img/paskibra.png')}}" style="width:70px;height:70px" alt=""></div>
                     <div class="media-body">
                         <h3 class="heading mb-3">Paskibraka</h3>
                         <p>A small river named Duden flows by their place and supplies.</p>
@@ -35,7 +35,7 @@
             </div>
             <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
                 <div class="media block-6 services d-flex">
-                    <div class="icon"><img src="{{asset('public/img/PMI.png')}}" style="width:70px;height:70px" alt=""></div>
+                    <div class="icon"><img src="{{asset('img/PMI.png')}}" style="width:70px;height:70px" alt=""></div>
                     <div class="media-body">
                         <h3 class="heading mb-3">PMR</h3>
                         <p>A small river named Duden flows by their place and supplies.</p>
@@ -44,7 +44,7 @@
             </div>
             <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
                 <div class="media block-6 services d-flex">
-                    <div class="icon"><img src="{{asset('public/img/pencaksilat.png')}}" style="width:70px;height:70px" alt=""></div>
+                    <div class="icon"><img src="{{asset('img/pencaksilat.png')}}" style="width:70px;height:70px" alt=""></div>
                     <div class="media-body">
                         <h3 class="heading mb-3">Pencak Silat</h3>
                         <p>A small river named Duden flows by their place and supplies.</p>
@@ -55,7 +55,7 @@
     </div>
 </section>
 <!-- GURU -->
-<section class="ftco-section ftco-team img" style="background-image:url('public/assets/welcome/images/bg_3.jpg');" data-stellar-background-ratio="0.5">
+<section class="ftco-section ftco-team img" style="background-image:url('assets/welcome/images/bg_3.jpg');" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
         <div class="row justify-content-center pb-5">
@@ -83,9 +83,100 @@
             </div>
         </div>
 </section>
+<!-- <section class="ftco-section ftco-game-schedule ftco-no-pt">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 heading-section ftco-animate mb-4">
+                <span class="subheading">Game Schedule</span>
+            </div>
+        </div>
+        <div class="row ftco-animate">
+            <div class="col-md-12 carousel-game-schedule owl-carousel">
+                <div class="item">
+                    <div class="game-schedule">
+                        <div class="sport-team d-flex align-items-center">
+                            <div class="img logo" style="background-image: url(images/team-1.jpg);"></div>
+                            <div class="pl-4 desc">
+                                <span class="venue">Home @ Arena</span>
+                                <h4 class="team-name">Knight Warrior</h4>
+                                <span class="date">April 17, 2018</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="game-schedule">
+                        <div class="sport-team d-flex align-items-center">
+                            <div class="img logo" style="background-image: url(images/team-2.jpg);"></div>
+                            <div class="pl-4 desc">
+                                <span class="venue">Home @ Arena</span>
+                                <h4 class="team-name">Knight Warrior</h4>
+                                <span class="date">April 17, 2018</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="game-schedule">
+                        <div class="sport-team d-flex align-items-center">
+                            <div class="img logo" style="background-image: url(images/team-3.jpg);"></div>
+                            <div class="pl-4 desc">
+                                <span class="venue">Home @ Arena</span>
+                                <h4 class="team-name">Knight Warrior</h4>
+                                <span class="date">April 17, 2018</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="game-schedule">
+                        <div class="sport-team d-flex align-items-center">
+                            <div class="img logo" style="background-image: url(images/team-4.jpg);"></div>
+                            <div class="pl-4 desc">
+                                <span class="venue">Home @ Arena</span>
+                                <h4 class="team-name">Knight Warrior</h4>
+                                <span class="date">April 17, 2018</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="game-schedule">
+                        <div class="sport-team d-flex align-items-center">
+                            <div class="img logo" style="background-image: url(images/team-5.jpg);"></div>
+                            <div class="pl-4 desc">
+                                <span class="venue">Home @ Arena</span>
+                                <h4 class="team-name">Knight Warrior</h4>
+                                <span class="date">April 17, 2018</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="game-schedule">
+                        <div class="sport-team d-flex align-items-center">
+                            <div class="img logo" style="background-image: url(images/team-6.jpg);"></div>
+                            <div class="pl-4 desc">
+                                <span class="venue">Home @ Arena</span>
+                                <h4 class="team-name">Knight Warrior</h4>
+                                <span class="date">April 17, 2018</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
 
 <section class="ftco-section">
     <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-7 heading-section text-center ftco-animate">
+                <span class="subheading">Berita</span>
+                <h2>Berita Terbaru</h2>
+            </div>
+        </div>
         <div class="row d-flex">
             @foreach ($posts as $post)
             <div class="col-md-6 col-lg-3 ftco-animate">
@@ -111,6 +202,94 @@
             <!-- BLOG -->
         </div>
 
+    </div>
+</section>
+<!-- TESTIMONIAL -->
+<section class="ftco-section testimony-section" style="background-image: url(images/bg_2.jpg);" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+                <span class="subheading">Kata Mutiara</span>
+                <h2 class="mb-4">Siswa SMAN 11 Luwu Utara</h2>
+            </div>
+        </div>
+        <div class="row ftco-animate justify-content-center">
+            <div class="col-md-7">
+                <div class="carousel-testimony owl-carousel ftco-owl">
+                    <div class="item">
+                        <div class="testimony-wrap text-center py-4 pb-5">
+                            <div class="user-img mb-4" style="background-image: url(images/person_1.jpg)">
+                                <span class="quote d-flex align-items-center justify-content-center">
+                                    <i class="icon-quote-left"></i>
+                                </span>
+                            </div>
+                            <div class="text p-3">
+                                <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                <p class="name">Arthur Browner</p>
+                                <span class="position">Viewer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimony-wrap text-center py-4 pb-5">
+                            <div class="user-img mb-4" style="background-image: url(images/person_2.jpg)">
+                                <span class="quote d-flex align-items-center justify-content-center">
+                                    <i class="icon-quote-left"></i>
+                                </span>
+                            </div>
+                            <div class="text p-3">
+                                <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                <p class="name">Arthur Browner</p>
+                                <span class="position">Viewer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimony-wrap text-center py-4 pb-5">
+                            <div class="user-img mb-4" style="background-image: url(images/person_3.jpg)">
+                                <span class="quote d-flex align-items-center justify-content-center">
+                                    <i class="icon-quote-left"></i>
+                                </span>
+                            </div>
+                            <div class="text p-3">
+                                <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                <p class="name">Arthur Browner</p>
+                                <span class="position">Viewer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimony-wrap text-center py-4 pb-5">
+                            <div class="user-img mb-4" style="background-image: url(images/person_4.jpg)">
+                                <span class="quote d-flex align-items-center justify-content-center">
+                                    <i class="icon-quote-left"></i>
+                                </span>
+                            </div>
+                            <div class="text p-3">
+                                <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                <p class="name">Arthur Browner</p>
+                                <span class="position">Viewer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimony-wrap text-center py-4 pb-5">
+                            <div class="user-img mb-4" style="background-image: url(images/person_3.jpg)">
+                                <span class="quote d-flex align-items-center justify-content-center">
+                                    <i class="icon-quote-left"></i>
+                                </span>
+                            </div>
+                            <div class="text p-3">
+                                <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                <p class="name">Arthur Browner</p>
+                                <span class="position">Viewer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 @include('layouts.home.footer')

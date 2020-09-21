@@ -18,7 +18,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 ftco-animate">
-                <img src="{{asset($post->gambar)}}" style="width:750px;height:450px" alt="">
+                <img src="{{asset($post->gambar)}}" style="width:75%px;height:450px" alt="">
                 <h2 class="mb-3">{{$post->judul}}</h2>
                 <hr>
                 <p><?= $post->konten ?></p>
@@ -35,7 +35,7 @@
 
                 <div class="about-author d-flex p-4 bg-light">
                     <div class="bio mr-5">
-                        <img src="{{asset('public/assets/welcome/images/person_1.jpg')}}" alt="Image placeholder" class="img-fluid mb-4">
+                        <img src="{{asset('assets/welcome/images/person_1.jpg')}}" alt="Image placeholder" class="img-fluid mb-4">
                     </div>
                     <div class="desc">
                         <h3>George Washington</h3>

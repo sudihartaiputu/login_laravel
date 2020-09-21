@@ -43,13 +43,13 @@ class GuruController extends Controller
             'tempat_lahir' => $request->tempat_lahir,
             'tanggal_lahir' => $request->tanggal_lahir,
             'jk' => $request->jk,
-            'foto' => 'public/upload/guru/' . $new_foto,
+            'foto' => 'upload/guru/' . $new_foto,
             'level' => $request->level,
             'password' => bcrypt('smanev'),
             'sandi' => 'smanev'
         ]);
 
-        $foto->move('public/upload/guru/', $new_foto);
+        $foto->move('upload/guru/', $new_foto);
         return redirect('guru')->with('sukses', 'Guru berhasil ditambah!');
     }
 
