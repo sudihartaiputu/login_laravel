@@ -17,18 +17,22 @@ class Materi extends Model
         'konten',
         'gambar',
         'slug',
-        'view'
+
     ];
     public function mapel()
     {
         return $this->belongsTo('App\Mapel');
     }
+    public function guru()
+    {
+        return $this->belongsTo('App\User');
+    }
     public function kelas()
     {
         return $this->belongsToMany('App\Kelas');
     }
-    public function guru()
+    public function kelasmateri()
     {
-        return $this->belongsTo('App\User');
+        return $this->hasMany('App\KelasMateri');
     }
 }

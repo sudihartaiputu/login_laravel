@@ -29,6 +29,7 @@
                         <li><a href="/siswa/ujian">Ujian</a></li>
                         <li><a href="/siswa/nilai">Nilai</a></li>
                         <li><a href="/siswa/galeri">Galeri</a></li>
+                        <li><a href="/siswa/download">Download</a></li>
                         <li><a href="/siswa/tutorial">Tutorial</a></li>
                         <li><a href="{{route('logout')}}"> <i class="fas fa-sign-out-alt"> Keluar</i></a></li>
                     </ul>

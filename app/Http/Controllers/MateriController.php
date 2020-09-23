@@ -59,7 +59,7 @@ class MateriController extends Controller
             'gambar' => 'upload/materi/' . $new_gambar,
             'slug' => Str::slug($request->judul),
             'guru_id' => Auth::id(),
-            'view' => '0'
+
         ]);
 
         $materi->kelas()->attach($request->kelas_id);
