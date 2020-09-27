@@ -1,12 +1,15 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\SKL;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Siswaskl;
 use Illuminate\Support\Facades\Storage;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Imports\SiswasklImport;
+use App\Siswaskl;
+use App\Suratskl;
+use App\PengaturanSkl;
 
 class SiswasklController extends Controller
 {
@@ -62,7 +65,7 @@ class SiswasklController extends Controller
             'sandi' => 'smanev'
 
         ]);
-        return redirect('admin.skl.index')->with('sukses', 'Siswa berhasil ditambah!');
+        return redirect('siswaskl')->with('sukses', 'Siswa berhasil ditambah!');
     }
 
     /**
@@ -187,5 +190,75 @@ class SiswasklController extends Controller
             //redirect
             return redirect()->route('siswaskl.index')->with(['error' => 'Data Gagal Diimport!']);
         }
+    }
+    public function sklsurat()
+    {
+        $suratskl = Suratskl::all();
+        return view('admin.skl.surat', compact('suratskl'));
+    }
+    public function pengaturanskl()
+    {
+        $pengaturanskl = PengaturanSkl::all();
+        return view('admin.skl.pengaturan', compact('pengaturanskl'));
+    }
+    public function pengaturansklupdate(Request $request, $id)
+    {
+        $this->validate($request, [
+            'nama_sekolah' => 'required|min:3|max:100',
+            'npsn' => 'required|numeric|min:3',
+            'nss' => 'required',
+            'nama_kepsek' => 'required',
+            'nip_kepsek' => 'required',
+            'alamat' => 'required',
+            'kota' => 'required',
+            'provinsi' => 'required',
+            'wstempel' => 'required',
+            'wttd' => 'required',
+        ]);
+        $pengaturanskl = PengaturanSkl::findorfail($id);
+        if ($request->has('stempel')) {
+            unlink($pengaturanskl->stempel);
+            $stempel = $request->stempel;
+            $new_stempel = time() . "_" . $stempel->getClientOriginalName();
+            $stempel->move('img/', $new_stempel);
+        } elseif ($request->has('ttd')) {
+            unlink($pengaturanskl->ttd);
+            $ttd = $request->ttd;
+            $new_ttd = time() . "_" . $ttd->getClientOriginalName();
+            $ttd->move('img/', $new_ttd);
+
+            $new_data = [
+                'nama_sekolah' => $request->nama_sekolah,
+                'npsn' => $request->npsn,
+                'nss' => $request->nss,
+                'nama_kepsek' => $request->nama_kepsek,
+                'nip_kepsek' => $request->nip_kepsek,
+                'alamat' => $request->alamat,
+                'kota' => $request->kota,
+                'provinsi' => $request->provinsi,
+                'wstempel' => $request->wstempel,
+                'wttd' => $request->wttd,
+                'stempel' => 'img/' . $new_stempel,
+                'ttd' => 'img/' . $new_ttd,
+
+            ];
+        } else {
+            $new_data = [
+                'nama_sekolah' => $request->nama_sekolah,
+                'npsn' => $request->npsn,
+                'nss' => $request->nss,
+                'nama_kepsek' => $request->nama_kepsek,
+                'nip_kepsek' => $request->nip_kepsek,
+                'alamat' => $request->alamat,
+                'kota' => $request->kota,
+                'provinsi' => $request->provinsi,
+                'wstempel' => $request->wstempel,
+                'wttd' => $request->wttd,
+            ];
+        }
+        // dd($request->all());
+
+        $pengaturanskl->update($new_data);
+        return redirect('/pengaturanskl')->with('sukses', 'Materi berhasil di Update');
     }
 }

@@ -114,14 +114,7 @@
                                      </a>
                                  </li>
                              </ul>
-                             <ul class="nav nav-treeview">
-                                 <li class="nav-item">
-                                     <a href="{{route('siswaskl.index')}}" class="nav-link">
-                                         <i class="far fa-dot-circle nav-icon"></i>
-                                         <p>Daftar Siswaskl</p>
-                                     </a>
-                                 </li>
-                             </ul>
+
                          </li>
                      </ul>
 
@@ -143,7 +136,6 @@
                                  <i class="fas fa-list-alt nav-icon"></i>
                                  <p>
                                      Kategori
-
                                  </p>
                              </a>
                          </li>
@@ -155,42 +147,44 @@
                                  <i class="fas fa-tag nav-icon"></i>
                                  <p>
                                      Tags
-
                                  </p>
                              </a>
-
-                         </li>
-                     </ul>
-                     <ul class="nav nav-treeview">
-                         <li></li>
-                         <li class="nav-item has-treeview">
-                             <a href="" class="nav-link">
-                                 <i class="fas fa-tag nav-icon"></i>
-                                 <p>
-                                     Kelulusan
-                                     <i class="right fas fa-angle-left"></i>
-                                 </p>
-                             </a>
-                             <ul class="nav nav-treeview">
-                                 <li class="nav-item">
-                                     <a href="{{route('admin.error')}}" class="nav-link">
-                                         <i class="far fa-dot-circle nav-icon"></i>
-                                         <p>Pengaturan Surat</p>
-                                     </a>
-                                 </li>
-                             </ul>
-                             <ul class="nav nav-treeview">
-                                 <li class="nav-item">
-                                     <a href="{{route('admin.error')}}" class="nav-link">
-                                         <i class="far fa-dot-circle nav-icon"></i>
-                                         <p>Tanggal Pengumuman</p>
-                                     </a>
-                                 </li>
-                             </ul>
                          </li>
                      </ul>
                  </li>
+                 <!-- Manajemen Data-->
+                 <li class="nav-item has-treeview">
+                     <a href="#" class="nav-link">
+                         <i class="nav-icon fas fa-users-cog"></i>
+                         <p>
+                             Master Kelulusan
+                             <i class="right fas fa-angle-left"></i>
+                         </p>
+                     </a>
+                     <!-- DATA SEKOLAH -->
+                     <ul class="nav nav-treeview">
+                         <li></li>
+                         <li class="nav-item has-treeview">
+                             <a href="{{route('siswaskl.index')}}" class="nav-link">
+                                 <i class="far fa-dot-circle nav-icon"></i>
+                                 <p>Daftar Siswa</p>
+                             </a>
+                         </li>
+                         <li class="nav-item has-treeview">
+                             <a href="{{route('skl.surat')}}" class="nav-link">
+                                 <i class="far fa-dot-circle nav-icon"></i>
+                                 <p>Pengaturan Surat</p>
+                             </a>
+                         </li>
+                         <li class="nav-item has-treeview">
+                             <a href="{{route('skl.pengaturan')}}" class="nav-link">
+                                 <i class="far fa-dot-circle nav-icon"></i>
+                                 <p>Pengaturan SKL</p>
+                             </a>
+                         </li>
 
+                     </ul>
+                 </li>
                  <!-- BLOG -->
                  <li class="nav-item has-treeview">
                      <a href="" class="nav-link">

@@ -49,9 +49,12 @@ Route::group(['middleware' => ['auth:user']], function () {
     Route::resource('/kelas', 'KelasController');
     // MAPEL
     Route::resource('/mapel', 'MapelController');
-    // SISWASKL
-    Route::resource('/siswaskl', 'SiswasklController');
-    Route::post('/siswaskl/import', 'SiswasklController@import')->name('siswaskl.import');
+    // SKL
+    Route::resource('/siswaskl', 'SKL\SiswasklController');
+    Route::post('/siswaskl/import', 'SKL\SiswasklController@import')->name('siswaskl.import');
+    Route::get('/pengaturanskl', 'SKL\SiswasklController@pengaturanskl')->name('skl.pengaturan');
+    Route::patch('/pengaturanskl/update/{id}', 'SKL\SiswasklController@pengaturansklupdate')->name('skl.pengaturanupdate');
+    Route::get('/suratskl', 'SKL\SiswasklController@sklsurat')->name('skl.surat');
     // KATEGORI
     Route::resource('/kategori', 'KategoriController');
     // TAG

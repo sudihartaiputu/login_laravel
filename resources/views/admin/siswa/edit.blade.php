@@ -25,14 +25,22 @@
                             @csrf
                             @method('put')
                             <div class="form-group">
+                                <label for="exampleInput1">NIS</label>
+                                <input type="text" class="form-control" id="nis" nis="nis" value="{{$siswa->nis}}">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInput1">NISN</label>
+                                <input type="text" class="form-control" id="nisn" name="nisn" value="{{$siswa->nisn}}">
+                            </div>
+                            <div class="form-group">
                                 <label for="exampleInput1">Nama</label>
                                 <input type="text" class="form-control" id="name" name="name" value="{{$siswa->name}}">
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlSelect1">Role Akses</label>
                                 <select class="form-control" id="level" name="level">
-                                    <option value="guru" @if($guru->level == 'guru') selected @endif>Guru</option>
-                                    <option value="walas" @if($guru->level == 'walas') selected @endif>Wali Kelas</option>
+                                    <option value="guru" @if($siswa->level == 'osis') selected @endif>Osis</option>
+                                    <option value="walas" @if($siswa->level == 'siswa') selected @endif>Siswa</option>
                                 </select>
                             </div>
                             <div class="form-group">

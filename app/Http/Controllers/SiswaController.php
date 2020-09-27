@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\BiodataSiswa;
 use Illuminate\Http\Request;
 use App\Siswa;
+use App\Kelas;
 
 class SiswaController extends Controller
 {
@@ -16,8 +16,7 @@ class SiswaController extends Controller
     public function index()
     {
         $siswa = Siswa::paginate(10);
-        $biodata = BiodataSiswa::all();
-        return view('admin.siswa.index', compact('siswa', 'biodata'));
+        return view('admin.siswa.index', compact('siswa'));
     }
 
     /**
@@ -27,7 +26,8 @@ class SiswaController extends Controller
      */
     public function create()
     {
-        return view('admin.siswa.create');
+        $kelas = Kelas::all();
+        return view('admin.siswa.create', compact('kelas'));
     }
 
     /**
@@ -46,12 +46,15 @@ class SiswaController extends Controller
             'tanggal_lahir' => 'required',
             'jk' => 'required',
             'email' => 'required|email',
-            'level' => 'required'
+            'level' => 'required',
+            'kelas' => 'required'
         ]);
+        // dd($request->all());
         Siswa::create([
             'name' => $request->name,
             'email' => $request->email,
             'nis' => $request->nis,
+            'kelas_id' => $request->kelas,
             'nisn' => $request->nisn,
             'tempat_lahir' => $request->tempat_lahir,
             'tanggal_lahir' => $request->tanggal_lahir,
@@ -60,7 +63,7 @@ class SiswaController extends Controller
             'password' => bcrypt('smanev'),
             'sandi' => ''
         ]);
-        return redirect('admin.siswa.index')->with('sukses', 'Siswa berhasil ditambah!');
+        return redirect('siswa.index')->with('sukses', 'Siswa berhasil ditambah!');
     }
 
     /**

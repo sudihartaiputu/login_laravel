@@ -44,6 +44,15 @@
                                 <input type="text" class="form-control" id="tanggal_lahir" name="tanggal_lahir">
                             </div>
                             <div class="form-group">
+                                <label for="exampleFormControlSelect1">Kelas</label>
+                                <select class="form-control" id="kelas" name="kelas">
+                                    <option value="" holder>Pilih Kelas</option>
+                                    @foreach($kelas as $kls)
+                                    <option value="{{$kls->id}}">{{$kls->nama}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group">
                                 <label for="exampleFormControlSelect1">Jenis Kelamin</label>
                                 <select class="form-control" id="jk" name="jk">
                                     <option value="" holder>Pilih Jenis Kelamin</option>
@@ -55,6 +64,7 @@
                                 <label for="exampleFormControlSelect1">Role Akses</label>
                                 <select class="form-control" id="level" name="level">
                                     <option value="siswa">Siswa</option>
+                                    <option value="osis">Osis</option>
                                 </select>
                             </div>
                             <div class="form-group">

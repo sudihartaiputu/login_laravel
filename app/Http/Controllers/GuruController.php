@@ -31,7 +31,7 @@ class GuruController extends Controller
             'jk' => 'required',
             'email' => 'required|email',
             'level' => 'required',
-            'foto' => 'required'
+            'foto' => 'required|file|image|mimes:jpeg,png,jpg|max:2048'
         ]);
         $foto = $request->foto;
         $new_foto = time() . "_" . $foto->getClientOriginalName();

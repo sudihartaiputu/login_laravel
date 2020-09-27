@@ -86,7 +86,7 @@
                         <label>PILIH FILE</label>
                         <input type="file" name="file" class="form-control" required>
                     </div>
-                    <p>Silahkan Download Template</p><a class="btn btn-primary btn-sm" href="{{asset('public/template/siswaskl.xlsx')}}">Template</a>
+                    <p>Silahkan Download Template</p><a class="btn btn-primary btn-sm" href="{{asset('template/siswaskl.xlsx')}}">Template</a>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">TUTUP</button>

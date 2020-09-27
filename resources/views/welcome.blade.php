@@ -83,91 +83,6 @@
             </div>
         </div>
 </section>
-<!-- <section class="ftco-section ftco-game-schedule ftco-no-pt">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 heading-section ftco-animate mb-4">
-                <span class="subheading">Game Schedule</span>
-            </div>
-        </div>
-        <div class="row ftco-animate">
-            <div class="col-md-12 carousel-game-schedule owl-carousel">
-                <div class="item">
-                    <div class="game-schedule">
-                        <div class="sport-team d-flex align-items-center">
-                            <div class="img logo" style="background-image: url(images/team-1.jpg);"></div>
-                            <div class="pl-4 desc">
-                                <span class="venue">Home @ Arena</span>
-                                <h4 class="team-name">Knight Warrior</h4>
-                                <span class="date">April 17, 2018</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="game-schedule">
-                        <div class="sport-team d-flex align-items-center">
-                            <div class="img logo" style="background-image: url(images/team-2.jpg);"></div>
-                            <div class="pl-4 desc">
-                                <span class="venue">Home @ Arena</span>
-                                <h4 class="team-name">Knight Warrior</h4>
-                                <span class="date">April 17, 2018</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="game-schedule">
-                        <div class="sport-team d-flex align-items-center">
-                            <div class="img logo" style="background-image: url(images/team-3.jpg);"></div>
-                            <div class="pl-4 desc">
-                                <span class="venue">Home @ Arena</span>
-                                <h4 class="team-name">Knight Warrior</h4>
-                                <span class="date">April 17, 2018</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="game-schedule">
-                        <div class="sport-team d-flex align-items-center">
-                            <div class="img logo" style="background-image: url(images/team-4.jpg);"></div>
-                            <div class="pl-4 desc">
-                                <span class="venue">Home @ Arena</span>
-                                <h4 class="team-name">Knight Warrior</h4>
-                                <span class="date">April 17, 2018</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="game-schedule">
-                        <div class="sport-team d-flex align-items-center">
-                            <div class="img logo" style="background-image: url(images/team-5.jpg);"></div>
-                            <div class="pl-4 desc">
-                                <span class="venue">Home @ Arena</span>
-                                <h4 class="team-name">Knight Warrior</h4>
-                                <span class="date">April 17, 2018</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="game-schedule">
-                        <div class="sport-team d-flex align-items-center">
-                            <div class="img logo" style="background-image: url(images/team-6.jpg);"></div>
-                            <div class="pl-4 desc">
-                                <span class="venue">Home @ Arena</span>
-                                <h4 class="team-name">Knight Warrior</h4>
-                                <span class="date">April 17, 2018</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
 
 <section class="ftco-section">
     <div class="container">
@@ -204,7 +119,7 @@
 
     </div>
 </section>
-<!-- TESTIMONIAL -->
+<!-- TESTIMONIAL
 <section class="ftco-section testimony-section" style="background-image: url(images/bg_2.jpg);" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
@@ -291,5 +206,5 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 @include('layouts.home.footer')

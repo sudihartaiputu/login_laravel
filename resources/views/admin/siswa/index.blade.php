@@ -47,7 +47,6 @@
                                             @method('delete')
                                             <a class="fas fa-edit btn btn-primary btn-sm" href="{{route ('siswa.edit', $hasil->id)}}"></a>
                                             <button type="submit" class="fas fa-trash-alt btn btn-danger btn-sm"></button>
-                                            <a class="fas fa-id-card btn btn-success btn-sm" href="{{route('siswa.biodata', $hasil->id)}}"></a>
 
                                         </form>
                                     </td>
