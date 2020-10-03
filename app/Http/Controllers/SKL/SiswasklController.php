@@ -217,48 +217,35 @@ class SiswasklController extends Controller
         ]);
         $pengaturanskl = PengaturanSkl::findorfail($id);
         if ($request->has('stempel')) {
-            unlink($pengaturanskl->stempel);
             $stempel = $request->stempel;
+            unlink($pengaturanskl->stempel);
             $new_stempel = time() . "_" . $stempel->getClientOriginalName();
             $stempel->move('img/', $new_stempel);
-        } elseif ($request->has('ttd')) {
-            unlink($pengaturanskl->ttd);
+        }
+        if ($request->has('ttd')) {
             $ttd = $request->ttd;
+            unlink($pengaturanskl->ttd);
             $new_ttd = time() . "_" . $ttd->getClientOriginalName();
             $ttd->move('img/', $new_ttd);
-
-            $new_data = [
-                'nama_sekolah' => $request->nama_sekolah,
-                'npsn' => $request->npsn,
-                'nss' => $request->nss,
-                'nama_kepsek' => $request->nama_kepsek,
-                'nip_kepsek' => $request->nip_kepsek,
-                'alamat' => $request->alamat,
-                'kota' => $request->kota,
-                'provinsi' => $request->provinsi,
-                'wstempel' => $request->wstempel,
-                'wttd' => $request->wttd,
-                'stempel' => 'img/' . $new_stempel,
-                'ttd' => 'img/' . $new_ttd,
-
-            ];
         } else {
-            $new_data = [
-                'nama_sekolah' => $request->nama_sekolah,
-                'npsn' => $request->npsn,
-                'nss' => $request->nss,
-                'nama_kepsek' => $request->nama_kepsek,
-                'nip_kepsek' => $request->nip_kepsek,
-                'alamat' => $request->alamat,
-                'kota' => $request->kota,
-                'provinsi' => $request->provinsi,
-                'wstempel' => $request->wstempel,
-                'wttd' => $request->wttd,
-            ];
+            $new_stempel = $pengaturanskl->stempel;
+            $new_ttd = $pengaturanskl->ttd;
         }
         // dd($request->all());
-
-        $pengaturanskl->update($new_data);
+        $pengaturanskl->update([
+            'nama_sekolah' => $request->nama_sekolah,
+            'npsn' => $request->npsn,
+            'nss' => $request->nss,
+            'nama_kepsek' => $request->nama_kepsek,
+            'nip_kepsek' => $request->nip_kepsek,
+            'alamat' => $request->alamat,
+            'kota' => $request->kota,
+            'provinsi' => $request->provinsi,
+            'stempel' => $new_stempel,
+            'ttd' => $new_ttd,
+            'wstempel' => $request->wstempel,
+            'wttd' => $request->wttd,
+        ]);
         return redirect('/pengaturanskl')->with('sukses', 'Materi berhasil di Update');
     }
 }

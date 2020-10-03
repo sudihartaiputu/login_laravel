@@ -52,7 +52,7 @@ class BerandaController extends Controller
             unlink($guru->foto);
             $foto = $request->foto;
             $new_foto = time() . "_" . $foto->getClientOriginalName();
-            $foto->move('public/upload/guru/', $new_foto);
+            $foto->move('upload/guru/', $new_foto);
 
             $guru_data = [
                 'nik' => $request->nik,
@@ -61,7 +61,7 @@ class BerandaController extends Controller
                 'tanggal_lahir' => $request->tanggal_lahir,
                 'tempat_lahir' => $request->tempat_lahir,
                 'jk' => $request->jk,
-                'foto' => 'public/upload/guru/' . $new_foto,
+                'foto' => 'upload/guru/' . $new_foto,
             ];
         } else {
             $guru_data = [

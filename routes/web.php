@@ -69,7 +69,6 @@ Route::group(['middleware' => ['auth:user']], function () {
 Route::group(['middleware' => ['auth:guru']], function () {
     Route::get('/berandaguru', 'BerandaController@berandaguru')->name('beranda.guru');
     Route::get('/guru/beranda/error', 'BerandaController@guruerror')->name('guru.error');
-    Route::patch('/beranda/profil/edit/{id}', 'BerandaController@profil')->name('profil.edit');
     Route::patch('/beranda/profil/{id}', 'BerandaController@profil')->name('profil.update');
     // MATERI
     Route::get('/gurumateri/sampah', 'MateriController@sampah')->name('gurumateri.sampah');
